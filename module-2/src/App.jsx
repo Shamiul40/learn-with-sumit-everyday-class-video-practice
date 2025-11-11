@@ -1,5 +1,6 @@
 
 import './App.css'
+import ArrayInState from './Components/ArrayInState'
 import ReactState from './Components/ReactState'
 import RespondingToEventsHandler from './Components/RespondingToEventsHandler'
 import Toolbar from './Components/RespondingToEventsHandler'
@@ -13,7 +14,9 @@ function App() {
 
     {/* <RespondingToEventsHandler /> */}
 
-    <ReactState />
+    {/* <ReactState /> */}
+
+    <ArrayInState />
 
     </>
   )
