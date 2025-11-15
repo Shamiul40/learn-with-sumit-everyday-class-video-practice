@@ -4,7 +4,8 @@ import ArrayInState from './Components/ArrayInState'
 import ReactState from './Components/ReactState'
 import RespondingToEventsHandler from './Components/RespondingToEventsHandler'
 import Toolbar from './Components/RespondingToEventsHandler'
-import ControlledForm from './Components/ControlledForm'
+import ObjectInState from "./Components/ObjectInState"
+
 
 function App() {
 
@@ -18,10 +19,8 @@ function App() {
     {/* <ReactState /> */}
 
     {/* <ArrayInState /> */}
-    {/* <ControlledForm /> */}
-
-
     
+    <ObjectInState />
     </>
   )
 }
