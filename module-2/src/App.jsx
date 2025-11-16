@@ -18,9 +18,9 @@ function App() {
 
     {/* <ReactState /> */}
 
-    {/* <ArrayInState /> */}
+    <ArrayInState />
     
-    <ObjectInState />
+    {/* <ObjectInState /> */}
     </>
   )
 }

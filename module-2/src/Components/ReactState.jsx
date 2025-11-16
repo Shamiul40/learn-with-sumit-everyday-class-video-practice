@@ -1,138 +1,69 @@
-// import React, { useState } from "react";
-// import { sculptureList } from "./data";
-
-// export default function ReactState() {
-//   const [index, setIndex] = useState(0);
-//   const [showMore, setShowMore] = useState(true);
-
-//   const handleClick = () => {
-//     setIndex(index + 1);
-//   };
-
-//   const handleShowMore =()=>{
-//     setShowMore(!showMore)
-//   }
-
-//   let sculpture = sculptureList[index];
-
-//   return (
-//     <div>
-//       <button
-//         className="bg-gray-700 text-white px-4 py-2 mx-4 rounded-lg"
-//         onClick={handleClick}
-//       >
-//         next
-//       </button>
-//       <button onClick={handleShowMore} className="bg-gray-700 text-white px-4 py-2  rounded-lg">
-//         {showMore ? "hide" : "show"} Details
-//       </button>
-//       <div>
-//         <h1>{sculpture.name}</h1>
-//         {showMore && <p>{sculpture.description}</p>}
-//         <img src={sculpture.url} alt={sculpture.alt} />
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-// import { useState } from "react";
-
-// export default function Counter() {
-//   const [number, setNumber] = useState(0);
-
-//   return (
-//     <>
-//       <h1>{number}</h1>
-//       <button
-//         onClick={() => {
-//           setNumber(number + 1);
-//           setNumber(number + 1);
-//           setNumber(number + 1);
-//         }}
-//       >
-//         +3
-//       </button>
-//     </>
-//   );
-// }
-
-
-
-
-
-
-// import { useState } from 'react';
-
-// export default function Counter() {
-//   const [number, setNumber] = useState(0);
-
-//   return (
-//     <>
-//       <h1>{number}</h1>
-//       <button onClick={() => {
-//         setNumber(number + 5);
-//         alert(number);
-//       }}>+5</button>
-//     </>
-//   )
-// }
-
-
-
-// import { useState } from 'react';
-
-// export default function Counter() {
-//   const [number, setNumber] = useState(0);
-
-//   return (
-//     <>
-//       <h1>{number}</h1>
-//       <button onClick={() => {
-//         setNumber(number + 5);
-//         setTimeout(() => {
-//           alert(number);
-//         }, 3000);
-//       }}>+5</button>
-//     </>
-//   )}
-
-
-
-
 import { useState } from 'react';
 
 export default function Form() {
-  const [to, setTo] = useState('Alice');
-  const [message, setMessage] = useState('Hello');
+  const [answer, setAnswer] = useState('');
+  const [error, setError] = useState(null);
+  const [status, setStatus] = useState('typing');
 
-  function handleSubmit(e) {
+  if (status === 'success') {
+    return <h1>That's right!</h1>
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    setTimeout(() => {
-      alert(`You said ${message} to ${to}`);
-    }, 5000);
+    setStatus('submitting');
+    try {
+      await submitForm(answer);
+      setStatus('success');
+    } catch (err) {
+      setStatus('typing');
+      setError(err);
+    }
+  }
+
+  function handleTextareaChange(e) {
+    setAnswer(e.target.value);
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        To:{' '}
-        <select
-          value={to}
-          onChange={e => setTo(e.target.value)}>
-          <option value="Alice">Alice</option>
-          <option value="Bob">Bob</option>
-        </select>
-      </label>
-      <textarea
-        placeholder="Message"
-        value={message}
-        onChange={e => setMessage(e.target.value)}
-      />
-      <button type="submit">Send</button>
-    </form>
+    <>
+      <h2>City quiz</h2>
+      <p>
+        In which city is there a billboard that turns air into drinkable water?
+      </p>
+      <form onSubmit={handleSubmit}>
+        <textarea
+          value={answer}
+          onChange={handleTextareaChange}
+          disabled={status === 'submitting'}
+        />
+        <br />
+        <button disabled={
+          answer.length === 0 ||
+          status === 'submitting'
+        }>
+          Submit
+        </button>
+        {error !== null &&
+          <p className="Error">
+            {error.message}
+          </p>
+        }
+      </form>
+    </>
   );
+}
+
+function submitForm(answer) {
+  // Pretend it's hitting the network.
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let shouldError = answer.toLowerCase() !== 'lima'
+      if (shouldError) {
+        reject(new Error('Good guess but a wrong answer. Try again!'));
+      } else {
+        resolve();
+      }
+    }, 1500);
+  });
 }
