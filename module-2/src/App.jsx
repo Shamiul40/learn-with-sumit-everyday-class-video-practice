@@ -5,6 +5,7 @@ import ReactState from './Components/ReactState'
 import RespondingToEventsHandler from './Components/RespondingToEventsHandler'
 import Toolbar from './Components/RespondingToEventsHandler'
 import ObjectInState from "./Components/ObjectInState"
+import GroupState from "./Components/GroupState"
 
 
 function App() {
@@ -18,9 +19,12 @@ function App() {
 
     {/* <ReactState /> */}
 
-    <ArrayInState />
+    {/* <ArrayInState /> */}
     
     {/* <ObjectInState /> */}
+
+    <GroupState />
+
     </>
   )
 }
