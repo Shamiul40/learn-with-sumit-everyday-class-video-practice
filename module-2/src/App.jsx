@@ -5,7 +5,8 @@ import ReactState from './Components/ReactState'
 import RespondingToEventsHandler from './Components/RespondingToEventsHandler'
 import Toolbar from './Components/RespondingToEventsHandler'
 import ObjectInState from "./Components/ObjectInState"
-import GroupState from "./Components/GroupState"
+import NestedState from './Components/NestedState'
+
 
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
     
     {/* <ObjectInState /> */}
 
-    <GroupState />
+    {/* <GroupState /> */}
 
+    <NestedState />
     </>
   )
 }
