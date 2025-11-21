@@ -6,6 +6,7 @@ import RespondingToEventsHandler from './Components/RespondingToEventsHandler'
 import Toolbar from './Components/RespondingToEventsHandler'
 import ObjectInState from "./Components/ObjectInState"
 import NestedState from './Components/NestedState'
+import Accordian from './Components/Accordian/Accordian'
 
 
 
@@ -27,6 +28,7 @@ function App() {
     {/* <GroupState /> */}
 
     <NestedState />
+    <Accordian ></Accordian>
     </>
   )
 }
