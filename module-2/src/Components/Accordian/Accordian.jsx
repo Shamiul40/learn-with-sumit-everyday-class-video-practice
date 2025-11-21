@@ -6,6 +6,7 @@ export default function Accordian() {
     <div>
       <h1>Shamiul Islam Accordian</h1>
       <ChildAccordian></ChildAccordian>
+      <ChildAccordian></ChildAccordian>
     </div>
   )
 }
