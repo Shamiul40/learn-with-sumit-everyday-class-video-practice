@@ -9,10 +9,6 @@ export default function Accordian() {
     }
 
   return (
-    <div>
-      <h1>Shamiul Islam Accordian</h1>
-      <ChildAccordian show={show} handleShow={handleShow}></ChildAccordian>
-      <ChildAccordian show={show} handleShow={handleShow}></ChildAccordian>
-    </div>
+    <
   )
 }
