@@ -1,7 +1,8 @@
 
 import './App.css'
 
-import Accordian from './Components/Accordian/Accordian'
+
+import Counter from './Components/State Preserve/Counter'
 
 
 
@@ -11,7 +12,9 @@ function App() {
   return (
     <>
     
-    <Accordian ></Accordian>
+    {/* <Accordian ></Accordian> */}
+
+     <Counter />
     </>
   )
 }
