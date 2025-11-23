@@ -1,12 +1,13 @@
-// import React, { useState } from 'react'
-
-// export default function Counter() {
+// function Counter({ isFancy }) {
 //   const [score, setScore] = useState(0);
 //   const [hover, setHover] = useState(false);
 
 //   let className = 'counter';
 //   if (hover) {
 //     className += ' hover';
+//   }
+//   if (isFancy) {
+//     className += ' fancy';
 //   }
 
 //   return (
@@ -27,12 +28,10 @@
 import React, { useState } from 'react'
 
 export default function Counter() {
- const [score, setScore] = useState(0);
-
+    const [score, setScore]= useState(0)
   return (
     <div>
-      <h1>{score}</h1>
-      <button onClick={()=>setScore(score+1)}>Add One</button>
+      
     </div>
   )
 }
