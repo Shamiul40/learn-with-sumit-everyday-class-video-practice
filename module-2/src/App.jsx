@@ -1,62 +1,24 @@
-
-import './App.css'
-import "./styles.css";
-
-
-
-import Counter from './Components/State Preserve/Counter'
 import { useState } from 'react';
+import Chat from './Components/Chat/Chat';
+import ContactList from './Components/Chat/ContactList';
 
 
-
-function App() {
-const [playerA, setPlayerA] =  useState(true)
-
+export default function Messenger() {
+  const [to, setTo] = useState(contacts[0]);
   return (
-    <>
-    
-    {playerA ? <Counter title="tailors score" /> :   <Counter title = "sarah score" /> }
-
-     <button onClick={()=>setPlayerA(!playerA)}>next Player</button>
-    
-    </>
+    <div>
+      <ContactList
+        contacts={contacts}
+        selectedContact={to}
+        onSelect={contact => setTo(contact)}
+      />
+      <Chat contact={to} />
+    </div>
   )
 }
 
-export default App
-
-
-
-
-// import './App.css'
-// import "./styles.css";
-
-
-
-// import Counter from './Components/State Preserve/Counter'
-// import { useState } from 'react';
-
-
-
-// function App() {
-// const [playerA, setPlayerA] =  useState(true)
-
-//   return (
-//     <>
-    
-//     {/* {playerA ? <Counter title="tailors score" /> :   <Counter title = "sarah score" /> } */}
-
-//     {
-//       playerA &&  <Counter title="tailors score" />
- 
-//     }
-
-//     {
-//       !playerA &&  <Counter title = "sarah score" />   }
-//      <button onClick={()=>setPlayerA(!playerA)}>next Player</button>
-    
-//     </>
-//   )
-// }
-
-// export default App
+const contacts = [
+  { id: 0, name: 'Taylor', email: 'taylor@mail.com' },
+  { id: 1, name: 'Alice', email: 'alice@mail.com' },
+  { id: 2, name: 'Bob', email: 'bob@mail.com' }
+];
