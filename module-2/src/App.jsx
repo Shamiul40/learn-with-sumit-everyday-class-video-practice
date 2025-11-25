@@ -20,7 +20,7 @@ export default function Messenger() {
         selectedContact={to}
         onSelect={contact => setTo(contact)}
       />
-      <Chat key={to.id} contact={to} />
+      <Chat  contact={to} />
     </div>
   )
 }
