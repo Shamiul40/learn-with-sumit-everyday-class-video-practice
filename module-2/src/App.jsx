@@ -11,17 +11,4 @@ const contacts = [
 
 
 
-export default function Messenger() {
-  const [to, setTo] = useState(contacts[0]);
-  return (
-    <div>
-      <ContactList
-        contacts={contacts}
-        selectedContact={to}
-        onSelect={contact => setTo(contact)}
-      />
-      <Chat  contact={to} />
-    </div>
-  )
-}
 
