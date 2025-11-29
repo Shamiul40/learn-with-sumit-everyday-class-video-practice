@@ -1,13 +1,13 @@
-import Heading from "./Components/ContextApi/Heading";
-import Section from "./Components/ContextApi/Section";
+import React from 'react'
+import Card from './Components/Card'
 
-
-export default function Page() {
+export default function App() {
   return (
-    <Section>
-      <Heading>Title</Heading>
-      <Heading>Heading</Heading>
-    
-    </Section>
-  );
+    <div>
+      <Card >
+          <h1>Shamiul islam</h1>
+          <h3>Shamiul islam</h3>
+      </Card>
+    </div>
+  )
 }
