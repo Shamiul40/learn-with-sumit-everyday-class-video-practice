@@ -7,10 +7,7 @@ export default function Page() {
     <Section>
       <Heading>Title</Heading>
       <Heading>Heading</Heading>
-      <Heading>Sub-heading</Heading>
-      <Heading>Sub-sub-heading</Heading>
-      <Heading>Sub-sub-sub-heading</Heading>
-      <Heading>Sub-sub-sub-sub-heading</Heading>
+    
     </Section>
   );
 }
