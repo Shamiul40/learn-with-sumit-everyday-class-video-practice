@@ -4,7 +4,7 @@ export default function UseRefLearn() {
  const inputRef = useRef(null)
 
  const handleClick=()=>{
-  inputRef.current.focus();
+ 
  }
   
   return (
