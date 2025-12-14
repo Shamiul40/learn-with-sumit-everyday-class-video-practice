@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function Playground() {
+export default function Playground() {
   const [text, setText] = useState('a');
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function Playground() {
 
     return () => {
       console.log('🟡 Cancel "' + text + '" log');
-      clearTimeout(timeoutId);
+    //   clearTimeout(timeoutId);
     };
   }, [text]);
 
