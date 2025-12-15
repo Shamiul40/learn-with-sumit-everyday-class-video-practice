@@ -13,7 +13,7 @@ export default function Playground() {
 
     return () => {
       console.log('🟡 Cancel "' + text + '" log');
-    //   clearTimeout(timeoutId);
+      clearTimeout(timeoutId);
     };
   }, [text]);
 
