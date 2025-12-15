@@ -20,7 +20,7 @@ export default function Playground() {
   return (
     <>
       <label>
-        What to log:{' '}
+        What:{' '}
         <input
           value={text}
           onChange={e => setText(e.target.value)}
