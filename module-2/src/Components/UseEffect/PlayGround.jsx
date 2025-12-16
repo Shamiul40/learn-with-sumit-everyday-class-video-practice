@@ -26,7 +26,7 @@ export default function Playground() {
           onChange={e => setText(e.target.value)}
         />
       </label>
-      <h1>{text}</h1>
+      
     </>
   );
 }
