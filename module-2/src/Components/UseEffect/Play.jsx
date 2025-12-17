@@ -8,7 +8,7 @@ export default function Play() {
         {show ? 'Unmount' : 'Mount'} the component
       </button>
       {show && <hr />}
-      {show && <Playground />}
+      
     </>
   );
 }
