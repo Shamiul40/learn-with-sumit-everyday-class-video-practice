@@ -7,8 +7,7 @@ export default function Play() {
       <button onClick={() => setShow(!show)}>
         {show ? 'Unmount' : 'Mount'} the component
       </button>
-      {show && <hr />}
-      
+    
     </>
   );
 }
