@@ -23,7 +23,7 @@ export default function MousePointer() {
           checked={canMove}
           onChange={e => setCanMove(e.target.checked)}
         />
-        The dot is allowed to move
+        The dot is allowed 
       </label>
       <hr />
       <div style={{
