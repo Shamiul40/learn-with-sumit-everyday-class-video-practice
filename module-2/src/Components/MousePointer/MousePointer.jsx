@@ -10,11 +10,7 @@ export default function MousePointer() {
     }
   }
 
-  useEffect(() => {
-    window.addEventListener('pointermove', handleMove);
-    return () => window.removeEventListener('pointermove', handleMove);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  
 
   return (
     <>
@@ -23,7 +19,7 @@ export default function MousePointer() {
           checked={canMove}
           onChange={e => setCanMove(e.target.checked)}
         />
-        The dot is allowed 
+        The d
       </label>
       <hr />
       <div style={{
