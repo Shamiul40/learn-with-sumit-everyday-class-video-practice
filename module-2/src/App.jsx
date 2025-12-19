@@ -6,6 +6,7 @@ import Comments from './Components/Comments/Comments'
 // import Play from './Components/UseEffect/Play'
 import MousePointer from './Components/MousePointer/MousePointer'
 import StatusBar from './Components/HooksLearn/StatusBar'
+import Form from './Components/Form/Form'
 
 
 export default function App() {
@@ -17,7 +18,8 @@ export default function App() {
     {/* <Comments /> */}
     {/* <Play /> */}
     {/* <MousePointer /> */}
-    <StatusBar />
+    {/* <StatusBar /> */}
+    <Form />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function UseOnlineBar() {
+export default function useOnlineBar() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   const handleOnline = () => {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import UseOnlineBar from '../../Hooks/UseOnlineBar'
+import useOnlineBar from '../../Hooks/UseOnlineBar'
 
 export default function StatusBar() {
-    const isOnline = UseOnlineBar()
+    const isOnline = useOnlineBar()
 
 
   return (
