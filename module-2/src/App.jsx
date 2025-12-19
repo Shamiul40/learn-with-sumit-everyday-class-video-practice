@@ -5,6 +5,7 @@ import UseRefLearn from './Components/UseRef/UseRefLearn'
 import Comments from './Components/Comments/Comments'
 // import Play from './Components/UseEffect/Play'
 import MousePointer from './Components/MousePointer/MousePointer'
+import StatusBar from './Components/HooksLearn/StatusBar'
 
 
 export default function App() {
@@ -15,7 +16,8 @@ export default function App() {
     {/* <UseEffectLearn /> */}
     {/* <Comments /> */}
     {/* <Play /> */}
-    <MousePointer />
+    {/* <MousePointer /> */}
+    <StatusBar />
     </div>
   )
 }
