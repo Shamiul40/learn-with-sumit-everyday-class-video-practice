@@ -3,8 +3,8 @@ import useInput from '../../Hooks/useInput'
 
 export default function Form() {
     
-    const firstNameProps = useInput("shamiul")
-    const lastNameProps = useInput("islam")
+    const firstNameProps = useInput("")
+    const lastNameProps = useInput("")
 
    
 
