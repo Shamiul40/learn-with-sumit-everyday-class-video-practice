@@ -16,7 +16,7 @@ export default function Form() {
       <br />
       <input type="text" {...lastNameProps} />
       <div>
-        <h1>Good : {firstNameProps.value} {lastNameProps.value}</h1>
+        
       </div>
     </div>
   )
