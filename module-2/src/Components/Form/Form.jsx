@@ -14,7 +14,7 @@ export default function Form() {
       <input type="text" {...firstNameProps}/>
       <br />
       <br />
-      <input type="text" {...lastNameProps} />
+      
       <div>
         
       </div>
