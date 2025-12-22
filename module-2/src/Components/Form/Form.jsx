@@ -13,8 +13,7 @@ export default function Form() {
     <div>
       <input type="text" {...firstNameProps}/>
       <br />
-      <br />
-      
+     
       <div>
         
       </div>
