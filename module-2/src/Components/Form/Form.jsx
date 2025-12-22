@@ -12,11 +12,7 @@ export default function Form() {
   return (
     <div>
       <input type="text" {...firstNameProps}/>
-      <br />
-     
-      <div>
-        
-      </div>
+      
     </div>
   )
 }
