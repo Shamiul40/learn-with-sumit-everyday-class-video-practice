@@ -1,8 +1,7 @@
 import { useRef } from 'react';
 
 export default function Counter() {
-    console.log("useRef rendered")
-  let ref = useRef(0);
+   
 
 
   return (
